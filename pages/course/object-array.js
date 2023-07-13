@@ -36,7 +36,7 @@ export default function ObjectArray() {
           </tr>
         </thead>
         <tbody>
-          {data.map((v, i) => {
+          {data.map((v) => {
             return (
               <tr key={v.id}>
                 <td>{v.id}</td>
@@ -91,9 +91,9 @@ export default function ObjectArray() {
       <button
         onClick={() => {
           // 1. uuid/nanoid函式庫來產生
-          const newId1 = self.crypto.randomUUID()
+          //const newId1 = self.crypto.randomUUID()
           // 2. 利用時間日期物件轉為毫秒整數
-          const newId2 = +new Date() //或 Number(new Date())
+          //const newId2 = +new Date() //或 Number(new Date())
           // 3. 一般的隨機數字串
           // 4. 仿照資料庫遞增id的做法(id需要有規則和都是數字才可以)
           const ids = data.map((v) => v.id) // 取出所有id為陣列
@@ -187,14 +187,14 @@ export default function ObjectArray() {
           // const foundIndex = deepCloneData.findIndex((v) => v.id === 3)
 
           // if (foundIndex !== -1) {
-          //   // 直接改值
+          // 直接改值
           //   deepCloneData[foundIndex].text = 'ccc'
-          //   //設定回狀態
+          //設定回狀態
           //   setData(deepCloneData)
           // }
 
           // 第二種方法：用map方式
-          const newData = data.map((v, i) => {
+          const newData = data.map((v) => {
             if (v.id === 3) return { ...v, text: 'ccc' }
             else return { ...v }
           })
