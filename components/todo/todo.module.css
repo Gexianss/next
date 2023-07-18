@@ -1,0 +1,28 @@
+.active {
+    color: rgb(62, 106, 131);
+    font-weight: bold;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+/* 過濾功能用 */
+.normal-btn {
+    background-color: rgb(62, 106, 131);
+    color: white;
+    border: 1px solid rgb(62, 106, 131);
+}
+
+.active-btn{
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid cadetblue;
+}
+
+.del-btn{
+ background-color: brown;
+ color: white;
+ border: 1px solid brown;
+}
